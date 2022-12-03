@@ -1,0 +1,12 @@
+.pass{
+    color: green;
+}
+
+.fail{
+    color: red;
+}
+
+table{
+    width: 100vh;
+    text-align: center;
+}

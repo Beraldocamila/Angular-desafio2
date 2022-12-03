@@ -1,1 +1,22 @@
-<p>list works!</p>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Lastname</th>
+            <th>Score</th>
+            <th>Pass/Fail</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr [ngClass]="alumno.score <7 ? 'fail' : 'pass'" *ngFor="let alumno of alumnos" >
+            <th>{{alumno.id}}</th>
+            <td>{{alumno.name}}</td>
+            <td>{{alumno.lastname}}</td>
+            <td>{{alumno.score}}</td>
+            <td *ngIf="alumno.score >= 7">Pass</td>
+            <td *ngIf="alumno.score < 7">Fail</td>
+
+        </tr>
+    </tbody>
+</table>
